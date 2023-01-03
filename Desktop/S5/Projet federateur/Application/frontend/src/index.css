@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body
+{
+  margin:0;
+  padding:0;
+  background:#262626;
+}
+.ring
+{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:150px;
+  height:150px;
+  background:transparent;
+  border:3px solid #3c3c3c;
+  border-radius:50%;
+  text-align:center;
+  line-height:150px;
+  font-family:sans-serif;
+  font-size:20px;
+  color: green;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  text-shadow:0 0 10px green;
+  box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+.ring:before
+{
+  content:'';
+  position:absolute;
+  top:-3px;
+  left:-3px;
+  width:100%;
+  height:100%;
+  border:3px solid transparent;
+  border-top:3px solid green;
+  border-right:3px solid green;
+  border-radius:50%;
+  animation:animateC 2s linear infinite;
+}
+.load
+{
+  display:block;
+  position:absolute;
+  top:calc(50% - 2px);
+  left:50%;
+  width:50%;
+  height:4px;
+  background:transparent;
+  transform-origin:left;
+  animation:animate 2s linear infinite;
+}
+.load:before
+{
+  content:'';
+  position:absolute;
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  background:green;
+  top:-6px;
+  right:-8px;
+  box-shadow:0 0 20px green;
+}
+@keyframes animateC
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
+}
+
+/* footer */
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 300px;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 567em) {
+    body {
+      margin-bottom: 700px;
+    }
+    .footer {
+      height: 300px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+  padding-top: 30px;
+  background-color: #292c2f; /* #292c2f*/
+  color: #bbb;
+}
+
+footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
+
+
+/* Profile */
+.profile-img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.navbar-nav .dropdown-menu {
+  background-color: #292c2f; /* #292c2f*/
+  color: #bbb;
+  margin : 5px 10px
+}
+
+.modify-profile{
+  text-decoration: none;
+  color: #bbb;
+  margin: 0px;
+  padding: 0px;
+}
+
+/** Navbar */
+
+Nav{
+  background-color: #292c2f; /* #292c2f*/
+  color: #bbb;
+}
+
+.nav-link{
+  color: #bbb !important
+}
+
+.logo{
+  color: #bbb !important
+}
+/*
+@keyframes spinning {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+.logo {
+  animation-name: spinning;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+*/
+/**Main */
+.main{
+  padding: 100px 0px 0px 0px;
+}
+
+.logo{
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+}
+
+/* Ticker */
+
+.ticker{
+  margin: 0px;
+  padding: 0px;
+}
+
+.tickerprice{
+ font-weight: bold;
+ font-size: 10px;
+}
+.tickertitle{
+  font-weight: bold;
+  font-size: 13px;
+  color: blue;
+ }
+ .tickergrow{
+  font-weight: bold;
+  font-size: 10px;
+  color: green;
+ }
+
+ .nav-item{
+  width: 100px;
+ }
+
+ /* News */
+ .li-main{
+  margin: 0px; padding: 0px;
+  background-color: 
+  ;
+  font-family: Georgia, serif;
+ }
+ .li-item{
+  padding: 5px 0px;
+   list-style: none;
+ }
+
+ .li-item-p{
+  font-weight: bold;
+  font-size: 11px;
+  color: blue;
+  margin: 0px;
+  padding: 0px;
+ }
+
+ .li-item-t{
+  font-size: 10px;
+  color: black;
+  visibility: 0.9;
+  margin: 0px;
+  padding: 0px;
+ }
+ .li-item-d{
+  font-size: 10px;
+  color: black;
+  visibility: 0.9;
+  margin: 0px;
+  padding: 0px;
+ }
+
+ .li-item-desc{
+  font-size: 10px;
+  color: black;
+  visibility: 0.9;
+  margin: 0px;
+  padding: 0px;
+ }
+
+ .li-item-a{
+  text-decoration: none;
+  font-size: 10px;
+  color: green;
+  visibility: 0.9;
+  margin: 0px;
+  padding: 0px;
+ }
+
+ .btn-group{
+   padding : 5px;
+   margin: 5px;
+ }
+
+ .green{
+  font-weight: bold;
+  color: blue;
+ }
+
+ .news{
+  padding: 0px;
+  margin: 0px;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+ }
+
+ .picture{
+  height: 50px;
+ }
+
+ .marquee {
+  animation : slide 15s linear infinite;
+  
+}
+
+@keyframes slide {
+  0% {
+    transform: translatex(0%)
+  }
+
+  100% {
+    transform: translatex(100%)
+  }
+}
+
+/* Portfolio*/
+
+.up{
+  color: green;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.down{
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
