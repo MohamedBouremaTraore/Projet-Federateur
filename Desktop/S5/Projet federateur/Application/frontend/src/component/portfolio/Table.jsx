@@ -86,10 +86,11 @@ import ColumnFilter from './trading/ColumnFilter';
                <th
                  {...column.getHeaderProps()}
                  style={{
-                   borderBottom: 'solid 1px red',
-                   background: 'aliceblue',
-                   color: 'black',
-                   fontWeight: 'bold'
+                  background: 'green',
+                  color: 'white',
+                  fontWeight: 'bold',
+                  margin : '0px',
+                  padding : '0px'
                  }}
                >
                  {column.render('Header')}
@@ -111,9 +112,10 @@ import ColumnFilter from './trading/ColumnFilter';
                    <td
                      {...cell.getCellProps()}
                      style={{
-                        padding: '2px',
-                        border: 'solid 1px gray',
-                        background: 'papayawhip',
+                      padding: '0px',
+                      border: 'solid 1px white',
+                      background: 'gray',
+                      color : 'white'
                      }}
                    >
                      {cell.render('Cell')}
@@ -125,15 +127,17 @@ import ColumnFilter from './trading/ColumnFilter';
          })}
        </tbody>
      </table>
+     <div class='row'>
+     <span >
+        <button onClick={()=>nextPage()} disabled={!canNextPage} class='btn btn-success btn-sm'>Next</button>
+        <button onClick={()=>previousPage()} disabled={!canPreviousPage} class='m-2 btn btn-success btn-sm'>Previous</button>
+     </span>
      <span>
         Page{' '}
         <strong>
             {pageIndex+1} of {pageOptions.length}
         </strong>{' '}
      </span>
-     <div>
-        <button onClick={()=>nextPage()} disabled={!canNextPage}>Next</button>
-        <button onClick={()=>previousPage()} disabled={!canPreviousPage}>Previous</button>
      </div>
      </>
    )

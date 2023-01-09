@@ -354,3 +354,16 @@ Nav{
   padding: 0px;
 }
 
+.historic{
+  width: 500px;
+ left: 120px;
+ top: 40px;
+}
+
+.portfolio{
+  width: 1200px;
+}
+
+.currentValue{
+  width : 400px
+}

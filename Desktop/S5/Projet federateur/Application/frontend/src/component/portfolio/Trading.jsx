@@ -8,7 +8,7 @@ import Plot from 'react-plotly.js';
 import Table from './Table'
 import Charts from './trading/Charts'
 import '../../index.css';
-import {useNavigaten ,Navigate} from 'react-router-dom';
+import {useNavigaten ,Navigate, useNavigate, Link} from 'react-router-dom';
 
 class Trading extends React.Component {
   constructor(props) {
@@ -76,11 +76,24 @@ class Trading extends React.Component {
     
   }
 
+ mygain(){
+  var e = document.getElementsByClassName('stock');
+  var sum = 0
+  for(var i in e){
+    sum = sum + Number(i.innerHTML)
+    console.log(i)
+  }
+  document.getElementsByClassName('gain')[0].innerHTML = sum
+  
+ }
+
   componentDidMount() {
     this.fetchStock();
     this.getDataTicker()
     this.getDatasTickers()
+    this.mygain()
     setInterval(this.getDatasTickers, 3000);
+    setInterval(this.mygain, 3000);
   }
 
    getDataTicker() {
@@ -184,19 +197,19 @@ class Trading extends React.Component {
   <div class="nav nav-tabs" id="nav-tab" role="tablist">
     <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Suivre son portefeuille</button>
     <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Valeur historique des actions</button>
-    <button class="btn btn-danger"  id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Quitter</button>
-  </div>
+    <Link to="/" class="btn btn-danger btn-sm" >Quitter</Link> 
+    </div>
 </nav>
-<div class="tab-content m-2" id="nav-tabContent">
+<div class="tab-content m-4" id="nav-tabContent">
   <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
       <div class="row"> 
         <div class="col col-7">
-          <Charts graphData={this.state.graphData}/>
+             <Charts graphData={this.state.graphData}/>
         </div>
         <div class="col col-5">
            <div>
-               <div class="row m-2">
-               <table class="table table-hover table-bordered">
+               <div class="row">
+               <table class="table table-hover table-bordered table-sm">
   <thead>
     <tr>
       <th scope="col">Action</th>
@@ -224,8 +237,8 @@ class Trading extends React.Component {
   </tbody>
         </table>
                </div>
-               <div class="row m-2">
-               <table class="table table-hover table-dark" >
+               <div class="row">
+               <table class="table table-hover table-bordered table-sm" >
   <thead>
     <tr>
       <th scope="col">Action</th>
@@ -241,7 +254,7 @@ class Trading extends React.Component {
         <th scope="row">{a.ticker}</th>
         <td class={a.ticker}>{a.nbr}</td>
         <td><span class="up">+</span></td>
-        <td> {(currentInvestmentValue[a.ticker].value - initialInvestmentValue[a.ticker].value)*a.nbr} $</td>
+        <td class='stock'> {(currentInvestmentValue[a.ticker].value - initialInvestmentValue[a.ticker].value)*a.nbr} $</td>
       </tr>
       })
     }
@@ -249,7 +262,7 @@ class Trading extends React.Component {
     <tr>
       <th scope="row">Total du gain</th>
       <td colspan="2"></td>
-      <td>800 $</td>
+      <td><span class='gain'></span> $</td>
     </tr>
   </tbody>
 </table>
@@ -259,9 +272,9 @@ class Trading extends React.Component {
       </div>
   </div>
   <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-           <div class="row">
-            <Table data={this.state.data} />
-          </div>
+           <div class="row historic position-relative">
+                 <Table data={this.state.data} class=''/>
+           </div>
   </div>
 </div>
  

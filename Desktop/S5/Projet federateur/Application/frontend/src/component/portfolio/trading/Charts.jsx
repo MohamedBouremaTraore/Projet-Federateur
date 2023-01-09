@@ -64,64 +64,64 @@ class Charts extends Component {
     const buttonChange = () => {
       return (
         <>
-        <li class="list-group-item">
+        <span class="col">
           <button
             onClick={() => {
               this.setState({ state: "Candle" });
             }}
-            class ="btn btn-outline-primary"
+            class ="btn btn-outline-primary btn-sm"
           >
             Candle
           </button>
-          </li>
+          </span>
 
-          <li class="list-group-item">
+          <span class="col">
           <button
             onClick={() => {
               this.setState({ state: "Line" });
             }}
-            class="btn btn-outline-primary"
+            class="btn btn-outline-primary btn-sm"
           >
             Line
           </button>
-          </li>
-          <li class="list-group-item">
+          </span>
+          <span class="col">
           <button
             onClick={() => {
               this.setState({ state: "Area" });
             }}
-            class="btn btn-outline-primary"
+            class="btn btn-outline-primary btn-sm"
           >
             Area
           </button>
-          </li>
+          </span>
         </>
       );
     };
     const indicatorChange = () => {
       return (
         <>
-          <li class="list-group-item">
+          <span class="col">
           <button
             onClick={() => {
               this.setState({ indicator: "MovingAverage" });
             }}
-            class="btn btn-outline-warning"
+            class="btn btn-outline-primary btn-sm"
           >
             MovingAverage
           </button>
-          </li>
-          <li class="list-group-item">
+          </span>
+          <span class="col">
           <button
             onClick={() => {
               this.setState({ indicator: null });
             }}
 
-            class="btn btn-outline-dark"
+            class="btn btn-outline-primary btn-sm"
           >
             Null
           </button>
-          </li>
+          </span>
         </>
       );
     };
@@ -153,10 +153,10 @@ class Charts extends Component {
     };
     return (
       <div className="app">
-        <ul class="list-group list-group-horizontal">
+        <div class="row">
           {buttonChange()}
           {indicatorChange()}
-        </ul>
+        </div>
         <Resizable defaultSize={{ height: "40px" }} maxHeight={"60px"}>
           <HighchartsStockChart height="10%">
           <Chart zoomType="x" />
