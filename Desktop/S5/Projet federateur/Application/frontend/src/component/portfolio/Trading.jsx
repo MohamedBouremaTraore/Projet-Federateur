@@ -9,6 +9,7 @@ import Table from './Table'
 import Charts from './trading/Charts'
 import '../../index.css';
 import {useNavigaten ,Navigate, useNavigate, Link} from 'react-router-dom';
+import { FaChartArea } from 'react-icons/fa';
 
 class Trading extends React.Component {
   constructor(props) {
@@ -243,7 +244,6 @@ class Trading extends React.Component {
     <tr>
       <th scope="col">Action</th>
       <th scope="col">Nombre d'action</th>
-      <th scope="col">Tendance</th>
       <th scope="col">Gain</th>
     </tr>
   </thead>
@@ -253,7 +253,6 @@ class Trading extends React.Component {
         return  <tr>
         <th scope="row">{a.ticker}</th>
         <td class={a.ticker}>{a.nbr}</td>
-        <td><span class="up">+</span></td>
         <td class='stock'> {(currentInvestmentValue[a.ticker].value - initialInvestmentValue[a.ticker].value)*a.nbr} $</td>
       </tr>
       })
@@ -261,8 +260,7 @@ class Trading extends React.Component {
 
     <tr>
       <th scope="row">Total du gain</th>
-      <td colspan="2"></td>
-      <td><span class='gain'></span> $</td>
+      <td colspan="2"><span class='gain'></span> $</td>
     </tr>
   </tbody>
 </table>

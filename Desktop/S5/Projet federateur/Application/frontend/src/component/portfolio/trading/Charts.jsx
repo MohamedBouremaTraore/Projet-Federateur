@@ -15,6 +15,12 @@ import {
   Tooltip
 } from "react-jsx-highstock";
 import data from "./data";
+import { FaChartArea } from 'react-icons/fa';
+import { FaChartLine } from 'react-icons/fa';
+import { GiChart } from 'react-icons/gi';
+import { TbChartCandle } from 'react-icons/tb';
+import { ImScissors } from 'react-icons/im';
+
 
 const StaticSimpleChart = (state, data2) => {
   if (state === "Candle") {
@@ -69,9 +75,9 @@ class Charts extends Component {
             onClick={() => {
               this.setState({ state: "Candle" });
             }}
-            class ="btn btn-outline-primary btn-sm"
+            class ="btn"
           >
-            Candle
+            <TbChartCandle/>
           </button>
           </span>
 
@@ -80,9 +86,9 @@ class Charts extends Component {
             onClick={() => {
               this.setState({ state: "Line" });
             }}
-            class="btn btn-outline-primary btn-sm"
+            class="btn"
           >
-            Line
+            <FaChartLine/>
           </button>
           </span>
           <span class="col">
@@ -90,9 +96,9 @@ class Charts extends Component {
             onClick={() => {
               this.setState({ state: "Area" });
             }}
-            class="btn btn-outline-primary btn-sm"
+            class="btn"
           >
-            Area
+            <FaChartArea/>
           </button>
           </span>
         </>
@@ -106,9 +112,9 @@ class Charts extends Component {
             onClick={() => {
               this.setState({ indicator: "MovingAverage" });
             }}
-            class="btn btn-outline-primary btn-sm"
+            class="btn"
           >
-            MovingAverage
+           <GiChart/>
           </button>
           </span>
           <span class="col">
@@ -117,9 +123,9 @@ class Charts extends Component {
               this.setState({ indicator: null });
             }}
 
-            class="btn btn-outline-primary btn-sm"
+            class="btn"
           >
-            Null
+            <ImScissors/>
           </button>
           </span>
         </>

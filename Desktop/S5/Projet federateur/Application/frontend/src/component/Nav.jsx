@@ -24,7 +24,7 @@ function Nav() {
           <a class="nav-link" href="/Recharge">Recharge</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Learning">Ecole de Bourse</a>
+          <a class="nav-link" href="/Learning">Partenaires</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -33,8 +33,13 @@ function Nav() {
           <ul class="dropdown-menu profile">
             <li><a class="modify-profile" href="/Trading">Apprendre à trader</a></li>
             <li><a class='modify-profile border-top' href="/ESG">Quiz sur ESG</a></li>
-            <li><a class='modify-profile border-top' href="/Divers">Divers</a></li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Learning">A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Learning">Contact</a>
         </li>
       </ul>
       <form class="d-flex" role="search">

@@ -367,3 +367,12 @@ Nav{
 .currentValue{
   width : 400px
 }
+
+.image{
+  width: 250px;
+}
+
+h1{
+  color: blue;
+  font-weight: bold;
+}

@@ -47,7 +47,7 @@ getData(){
   componentDidMount(){
     this.getData();
     this.getTickersDatas();
-   // setInterval(this.getTickersDatas, 5000);
+    setInterval(this.getTickersDatas, 5000);
   }
   
   render() {
@@ -62,9 +62,9 @@ getData(){
         {
          this.state.tikersdatas.map((a)=>{
           return  <li class="nav-item ">
-          <div ><span class="tickertitle">GOOG</span></div>
-          <div class="tickerprice">{a.Close} $</div>
-          <div class="tickergrow">{Math.round((a.Close-a.Open)/a.Close*1000000)/1000000}%</div>
+          <div ><span class="tickertitle">{a.ticker}</span></div>
+          <div class="tickerprice">{a.value.Close} $</div>
+          <div class="tickergrow">{Math.round((a.value.Close-a.value.Open)/a.value.Close*1000000)/1000000}%</div>
         </li>
          })
         }
