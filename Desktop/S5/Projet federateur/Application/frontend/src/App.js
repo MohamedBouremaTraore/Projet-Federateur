@@ -8,6 +8,7 @@ import Learning from './component/portfolio/Learning'
 import ESG from './component/portfolio/ESG'
 import Trading from './component/portfolio/Trading'
 import Divers from './component/portfolio/Divers'
+import Chatbox from './component/Chatbox'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/ESG" element={<ESG />}></Route>
           <Route path="/Trading" element={<Trading />}></Route>
           <Route path="/Divers" element={<Divers />}></Route>
+          <Route path="/Chatbox" element={<Chatbox />}></Route>
       </Routes>
     </div>
   );

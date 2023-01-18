@@ -214,7 +214,6 @@ class Trading extends React.Component {
   <thead>
     <tr>
       <th scope="col">Action</th>
-      <th scope="col">Date</th>
       <th scope="col">Open</th>
       <th scope="col">High</th>
       <th scope="col">Low</th>
@@ -225,7 +224,6 @@ class Trading extends React.Component {
       this.state.datas.map((a) => {
         return  <tr>
         <th scope="row">{a.ticker}</th>
-        <td>{a["value"].Date.substring(10)}</td>
         <td id={a.ticker}>{a["value"].Open}</td>
         <td>{a["value"].High}</td>
         <td>{a["value"].Low}</td>

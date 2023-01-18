@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Footer() {
     return (
       <footer class="footer">
-      <div class="container">
+      <div class="container" id='contact'>
           <div class="row">
               <div class="col-md-5">
                   <h5><i class="fa fa-road"></i> ACME CO INC.</h5>

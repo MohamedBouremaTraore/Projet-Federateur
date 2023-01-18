@@ -132,7 +132,7 @@ class Charts extends Component {
       );
     };
     const maxim = (e, type, func) => {
-      const arr = graphData.map(e => {
+      const arr = data2.map(e => { //graphData
         switch (type) {
           case "close":
             return e[4];
@@ -153,7 +153,7 @@ class Charts extends Component {
       } else if (e === "ma") {
         return arr.map((e, i) => {
           const n = i - func;
-          return [graphData[i][0], (arr[i] + arr[n]) / 2];
+          return [data[i][0], (arr[i] + arr[n]) / 2];
         });
       }
     };
@@ -177,7 +177,7 @@ class Charts extends Component {
               max={maxim("max", "close", 12)}
             >
               <YAxis.Title>Price Close</YAxis.Title>
-              {StaticSimpleChart(state, graphData)}
+              {StaticSimpleChart(state, data2)}
               {StaticindicatorChart(this.state.period)}
             </YAxis>
             <YAxis

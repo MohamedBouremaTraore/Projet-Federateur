@@ -3,6 +3,7 @@ import LogoutButton from './LogoutButton';
 import Profile from './Profile';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import Chatbox from './Chatbox'
 
 function Nav() {
     return (
@@ -17,14 +18,14 @@ function Nav() {
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      {/*}  <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/Competition">Competition</a>
+    </li>*/}
+        <li class="nav-item">
+          <a class="nav-link" href="/Recharge">ESG analyseur</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Recharge">Recharge</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/Learning">Partenaires</a>
+          <a class="nav-link" href="#partenaires">Partenaires</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="/about" role="button" data-bs-toggle="dropdown" aria-expanded="true">
@@ -36,15 +37,15 @@ function Nav() {
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Learning">A propos</a>
+          <a class="nav-link" href="#services">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/Learning">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2 form-sm" type="search" placeholder="Ecrire ..." aria-label="Search"/>
+        <button class="btn btn-outline-success btn-sm" type="submit">Rechercher</button>
       </form>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item p-2">
@@ -60,6 +61,9 @@ function Nav() {
     </div>
        </div>
     </nav>
+    <div>
+          <Chatbox/>
+    </div>
   </div>
     );
   }
